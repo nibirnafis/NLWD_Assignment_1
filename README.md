@@ -1,4 +1,5 @@
-1. What are some differences between interfaces and types in TypeScript?
+Question:1
+What are some differences between interfaces and types in TypeScript?
 
 -->
 Both types and interfaces are used to define types in typscript. There are some differences between them.
@@ -27,7 +28,8 @@ Interface:
 
 
 
-2. Provide an example of using union and intersection types in TypeScript.
+Question:2
+Provide an example of using union and intersection types in TypeScript.
 
 -->
 Here is an example of using union and intersection types:
