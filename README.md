@@ -1,14 +1,22 @@
 1. What are some differences between interfaces and types in TypeScript?
 
 -->
-Type and Interface both defines type. There are some differences between interfaces and types.
+Both types and interfaces are used to define types in typscript. While they share some similarities, there are significant differences between them.
 
-Types:
-1. To use type you have to use the keyword type
-2. type can be used for premitive and non-premitives
-3. 
+#Type:
+It was declared using type keywords.
 
-Interface:
-1. To use type you have to use the keyword interface
-2. can only be used for non-premtives
-3. can be extended using extends
+Can be used to define both primitive and non-primitive types.
+
+Supports the expansion through the intersection (&).
+
+The declaration does not support the merger.
+
+#Interface:
+The interface was declared using keywords.
+
+Only non-primitive types (object) can be used to define.
+
+The extended can be extended using the keywords.
+
+The declaration supports the merger (useful to increase the existing interface).
