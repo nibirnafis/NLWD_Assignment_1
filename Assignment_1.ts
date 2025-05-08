@@ -5,9 +5,6 @@ function formatString(input: string, toUpper?: boolean){
     return input.toLowerCase()
 }
 
-formatString('Hello', false)
-
-
 
 
 
@@ -17,14 +14,6 @@ function filterByRating(items: { title: string; rating: number }[]): { title: st
     const ratedItems = items.filter(item => item.rating >= 4)
     return ratedItems
 }
-
-const Items = [
-    { title: "Mobile", rating: 4.50 },
-    { title: "Laptop", rating: 3.90 },
-    { title: "Desktop", rating: 4.10 },
-]
-
-filterByRating(Items)
 
 
 
@@ -37,8 +26,6 @@ function concatenateArrays<T>(...arrays: T[][]): T[]{
     return newArray
 }
 
-concatenateArrays([1,2], [3,4,5], [6])
-concatenateArrays(["a","b"], ["c","d","e"], ["f"])
 
 
 
@@ -74,10 +61,6 @@ class Car extends Vehicle{
 }
 
 
-const car = new Car("Ferrari", 1930, "FZ-X")
-car.getInfo()
-car.getModel()
-
 
 
 
@@ -92,7 +75,6 @@ function processValue(value: string | number): number{
 }
 
 
-processValue(20)
 
 
 
@@ -107,25 +89,13 @@ function getMostExpensiveProduct(products: Product[]):  Product | null{
     if(products.length > 0){
         const productPrices = products.map(products => products.price)
         const highestPrice = Math.max(...productPrices)
-        const highestPricedProduct = products.find(product => product.price == highestPrice)
+        const highestPricedProduct = products.find(product => product.price == highestPrice) || null
         return highestPricedProduct
     }
     else{
         return null
     }
 }
-
-const products = [
-    {name: "Mobile", price: 20000},
-    {name: "Laptop", price: 80000},
-    {name: "Desktop", price: 60000},
-    {name: "Bike", price: 150000},
-    {name: "Car", price: 1000000}
-]
-
-
-
-getMostExpensiveProduct(products)
 
 
 
@@ -151,9 +121,6 @@ enum Day {
     return 'weekend'
   }
 
-  getDayType(Day.Sunday)
-
-
 
 
 
@@ -161,14 +128,11 @@ enum Day {
 
   async function squareAsync(n: number): Promise<number>{
     return new Promise((resolve, reject) => {
-        if(n*1 > 0){
-            resolve (n * n)
-        } else if(n*1 < 0){
+        
+        if(n >= 0){
+            setTimeout(()=>{resolve (n * n)}, 1000)
+        } else{
             reject ("Error: Negative number not allowed")
         }
     })
   }
-
-
-//   squareAsync(6).then(console.log)
-//   squareAsync(-6).catch(console.error)
