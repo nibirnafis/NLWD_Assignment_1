@@ -20,6 +20,8 @@ function filterByRating(items: { title: string; rating: number }[]): { title: st
 
 
 
+
+
 function concatenateArrays<T>(...arrays: T[][]): T[]{
     const newArray: T[] = []
     arrays.forEach(array => array.forEach(element => newArray.push(element)))
